@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    background-color: rgb(10, 6, 0);
+}
+#gradient {
+    background-image: radial-gradient(circle 50vw, rgb(255, 204, 127), rgb(10, 6, 0));
+    opacity: 20%;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+header {
+    background-color: goldenrod;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    height: 75px;
+    margin-bottom: 100px;
+}
+#titleBadge {
+    background-color: rgb(6, 6, 16);
+    width: fit-content;
+    border-color: goldenrod;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 75px;
+    padding: 15px;
+    margin-inline: auto;
+}
+#title1 {
+    color: palegoldenrod;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+#title2 {
+    color: red;
+    font-weight: bold;
+}
+#formBox {
+    margin-inline: auto;
+    max-width: 525px;
+    display: flex;
+}
+form {
+    max-width: 500px;
+    margin-inline: auto;
+}
+select {
+    background-color: rgb(10, 6, 0);
+    min-width: 300px;
+}
+#canvasBox {
+    margin-inline: auto;
+    max-width: 525px;
+    display: flex;
+    /*width: 500px;
+    height: 500px;*/
+}
+#canvasBox > canvas {
+    margin-inline: auto;
+    border-width: 2px;
+    border-style: solid;
+    border-color: goldenrod;
+}
+img {
+    width: inherit;
+    height: inherit;
+    z-index: 2;
+}
+.form-control {
+    border-color: goldenrod;
+    border-width: 2px;
+    background-color: rgb(6, 6, 16);
+    color: palegoldenrod;
+}
+.form-control:hover {
+    border-color: palegoldenrod;
+}
+.form-control:focus {
+    border-color: palegoldenrod;
+    background-color: rgb(6, 6, 32);
+    box-shadow: 0 0 0 .15rem palegoldenrod;
+    color: palegoldenrod;
+}
+.form-control:focus-within {
+    background-color: rgb(6, 6, 16);
+    color: palegoldenrod;
+}
