@@ -21,15 +21,20 @@
             <!--div>
                 <img id="preview" src="" alt="">
             </div-->
-            <div class="form-group">
-                <button id="formSubmit" type="submit" class="btn btn-success">Locate on Map</button>
-                <button id="reset" type="reset" class="btn btn-danger">Reset Form</button>
+            <div id="descriptionBox">
+            </div>
+            <div class="form-group text-center">
+                <button id="formSubmit" type="submit" class="btn btn-success" hidden>Locate on Map</button>
+                <button id="reset" type="reset" class="btn btn-danger" hidden>Reset Form</button>
+            </div>
+            <div>
+                <p id="submitMessage">&#8203</p>
             </div>
         </form>
     </div>
-    <br>
     <div id="canvasBox">
-        <canvas width="500" height="500">
+        <h2 id="loadingMap">Loading Map...</h2>
+        <canvas width="500" height="500" hidden>
             <img id="mapImg" src="../src/assets/images/Teyvat_Map.png">
             <img id="defaultImg" src="https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Talent_Explosive_Puppet.png/revision/latest?cb=20210607085822">
         </canvas>

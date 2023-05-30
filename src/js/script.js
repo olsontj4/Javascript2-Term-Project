@@ -8,13 +8,24 @@ class GenshinTool {
         this.uiReset = document.getElementById("reset");
         this.uiSelect = document.querySelectorAll("select");
         this.uiSpinner = document.getElementById("loading");
+        this.uiDescriptionBox = document.getElementById("descriptionBox");
+        this.uiSubmitMessage = document.getElementById("submitMessage");
 
         this.url = "https://api.genshin.dev";
         this.urlExtension = "";
 
+        this.holdData = null;
+        this.holdJSON = null;
+
+        this.getCoords = this.getCoords.bind(this);
+        this.getCoords();
         this.getDatabase = this.getDatabase.bind(this);
         this.getDatabase(0, "");
+        document.getElementById("loadingMap").hidden = true;
+        this.uiCanvas.hidden = false;
         this.drawCanvas(this.mapImg, -4524, -914);
+        this.uiSubmit.hidden = false;
+        this.uiReset.hidden = false;
     }
     addEventHandlers() {
         this.formSubmit = this.formSubmit.bind(this);
@@ -22,6 +33,7 @@ class GenshinTool {
         this.uiReset.onclick = this.resetForm;
     }
     getDatabase(index, extension) {
+        this.uiSubmitMessage.innerHTML = "&#8203";
         this.uiSpinner.classList.remove("d-none");
         console.log(index, extension);
         //console.error((this.urlExtension.match(/\/[^ \/]+/g) || []));
@@ -37,12 +49,19 @@ class GenshinTool {
             this.urlExtension += `/${extension}`;
         }
         console.log(`${this.url}${this.urlExtension}`);
+        /*if (this.holdData != null) {
+            if (this.holdData[extension].description != null) {
+                this.loadItemDescription(this.holdData.extension);
+            }
+        }*/
         fetch(`${this.url}${this.urlExtension}`)
             .then(response => response.json())
             .then(data => {
-                //console.log(data);
-                if (index == 3) {
-                    this.getImage(data);
+                this.holdData = data;
+                console.log(this.holdData);
+                if (data.description != null) {
+                    //this.getImage(data);
+                    this.loadItemDescription(data);
                 }
                 else {
                     this.addEventHandlers();
@@ -52,10 +71,33 @@ class GenshinTool {
             })
             .catch(error => alert(error))
     }
+    getCoords() {
+        fetch("./js/mapCoords.json")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                this.holdJSON = data;
+            })
+        .catch(error => console.error(error))
+    }
     getImage(data) {
         document.getElementById("preview").src = data;
     }
+    loadItemDescription(data) {
+        if (this.uiDescriptionBox.firstElementChild != null) {
+            this.uiDescriptionBox.firstElementChild.remove();
+        }
+
+        const descriptionTemplate = document.createElement('p');
+        descriptionTemplate.id = `description`;
+        descriptionTemplate.innerHTML = data.description;
+
+        this.uiDescriptionBox.appendChild(descriptionTemplate);
+    }
     loadUiInputs(inputIndex, data) {
+        if (this.uiDescriptionBox.firstElementChild != null) {
+            this.uiDescriptionBox.firstElementChild.remove();
+        }
         //console.warn(inputIndex, data);
         const thisIndex = inputIndex;
         if (document.getElementById("dropdownMenus").childElementCount > (thisIndex * 2)) {
@@ -122,8 +164,25 @@ class GenshinTool {
     formSubmit(event) {
         event.preventDefault();
         console.log("Success!");
-        main.drawCanvas(this.mapImg, -5000, -1000);
-        main.drawMarker();
+        if (document.getElementById(`input0`).selectedIndex == 0) {
+            this.uiSubmitMessage.innerHTML = "No item selected."
+        }
+        else if (document.getElementById(`input0`).value == "characters" || document.getElementById(`input0`).value == "enemies") {
+            const submitMessage = `${document.getElementById(`input0`).value} are not items, and do not have a location on the map.`
+            submitMessage.charAt(0).toUpperCase();
+            this.uiSubmitMessage.innerHTML = submitMessage;
+        }
+        else {
+            this.searchCoords();
+        }
+        /*else {
+            main.drawCanvas(this.mapImg, -5000, -1000);
+        }*/
+    }
+    searchCoords() {
+        for (let i = 0; i < Object.keys(this.holdJSON).length; i++) {
+            console.log(Object.keys(this.holdJSON)[i]);
+        }
     }
     drawCanvas(img, x, y) {
         console.error(img);

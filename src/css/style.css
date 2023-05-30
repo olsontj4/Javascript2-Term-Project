@@ -47,9 +47,20 @@ form {
     max-width: 500px;
     margin-inline: auto;
 }
+#dropdownMenus {
+    width: fit-content;
+    margin-inline: auto;
+}
+#descriptionBox {
+    color: palegoldenrod;
+}
 select {
     background-color: rgb(10, 6, 0);
     min-width: 300px;
+}
+#submitMessage {
+    color: red;
+    text-align: center;
 }
 #canvasBox {
     margin-inline: auto;
@@ -57,6 +68,10 @@ select {
     display: flex;
     /*width: 500px;
     height: 500px;*/
+}
+#loadingMap {
+    color: white;
+    margin-inline: auto;
 }
 #canvasBox > canvas {
     margin-inline: auto;
