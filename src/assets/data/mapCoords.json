@@ -19,9 +19,44 @@
         "items": ["gladiator-s-finale", "wanderer-s-troupe", "lucky-dog", "berserker", "the-exile", "prayers-to-springtime"],
         "coords": [4930, 998]
     },
+    "pyro-regisvine": {
+        "name": "Pyro Regisvine",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "adventurer", "berserker", "instructor", "prayers-for-illumination"],
+        "coords": [3618, 1971]
+    },
+    "oceanid": {
+        "name": "Oceanid",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "adventurer", "berserker", "the-exile", "prayers-for-destiny"],
+        "coords": [3956, 1151]
+    },
+    "primo-geovishap": {
+        "name": "Primo Geovishap",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "berserker", "instructor", "the-exile", "prayers-for-wisdom", "prayers-to-springtime", "prayers-for-illumination", "prayers-for-destiny"],
+        "coords": [3353, 1941]
+    },
     "cecilia-garden": {
         "name": "Cecilia Garden",
         "coords": [4212, 917]
+    },
+    "domain-of-guyun": {
+        "name": "Domain of Guyun",
+        "coords": [4579, 2194]
+    },
+    "hidden-palace-of-lianshan-formula": {
+        "name": "Hidden Palace of Lianshan Formula",
+        "coords": [4303, 1677]
+    },
+    "hidden-palace-of-lianshan": {
+        "name": "Hidden Palace of Lianshan Formula",
+        "coords": [4303, 1677]
+    },
+    "midsummer-courtyard": {
+        "name": "Midsummer Courtyard",
+        "coords": [4873, 801]
+    },
+    "court-of-flowing-sand": {
+        "name": "Court of Flowing Sand",
+        "coords": [6300, 3250]
     },
     "mondstadt": {
         "name": "Mondstadt",
