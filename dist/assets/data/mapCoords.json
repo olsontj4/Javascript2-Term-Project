@@ -1,0 +1,38 @@
+{
+    "anemo-hypostasis": {
+        "name": "Anemo Hypostasis",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "lucky-dog", "berserker", "instructor"],
+        "coords": [4746, 594]
+    },
+    "electro-hypostasis": {
+        "name": "Electro Hypostasis",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "traveling-doctor", "instructor", "the-exile", "prayers-for-wisdom"],
+        "coords": [5066, 1392]
+    },
+    "geo-hypostasis": {
+        "name": "Geo Hypostasis",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "traveling-doctor", "instructor", "the-exile"],
+        "coords": [4522, 2024]
+    },
+    "cryo-regisvine": {
+        "name": "Cryo Regisvine",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "lucky-dog", "berserker", "the-exile", "prayers-to-springtime"],
+        "coords": [4930, 998]
+    },
+    "cecilia-garden": {
+        "name": "Cecilia Garden",
+        "coords": [4212, 917]
+    },
+    "mondstadt": {
+        "name": "Mondstadt",
+        "coords": [4524, 914, "no marker"]
+    },
+    "inazuma": {
+        "name": "Inazuma",
+        "coords": [6337, 3632, "no marker"]
+    },
+    "liyue": {
+        "name": "Liyue",
+        "coords": [3897, 2358, "no marker"]
+    }
+}

@@ -55,7 +55,7 @@ form {
     color: palegoldenrod;
 }
 select {
-    background-color: rgb(10, 6, 0);
+    /*background-color: rgb(10, 6, 0);*/
     min-width: 300px;
 }
 #submitMessage {
@@ -84,22 +84,66 @@ img {
     height: inherit;
     z-index: 2;
 }
-.form-control {
+.form-select:hover {
+    border-color: palegoldenrod;
+}
+.form-select:focus {
+    border-color: palegoldenrod;
+    background-color: rgb(6, 6, 16);
+    box-shadow: 0 0 0 .15rem palegoldenrod;
+    color: palegoldenrod;
+}
+/*.form-select:focus-within {
+    background-color: rgb(6, 6, 16);
+    color: palegoldenrod;
+}*/
+.form-select > option {
+    background-color: rgb(6, 6, 32);
+}
+.form-select {
     border-color: goldenrod;
     border-width: 2px;
     background-color: rgb(6, 6, 16);
     color: palegoldenrod;
 }
-.form-control:hover {
-    border-color: palegoldenrod;
-}
-.form-control:focus {
-    border-color: palegoldenrod;
-    background-color: rgb(6, 6, 32);
-    box-shadow: 0 0 0 .15rem palegoldenrod;
+.form-select:disabled {
+    border-color: goldenrod;
+    border-width: 2px;
     color: palegoldenrod;
 }
-.form-control:focus-within {
-    background-color: rgb(6, 6, 16);
-    color: palegoldenrod;
+.btn-success:hover {
+    background-color: #42cc8c;
+    border-color: #42cc8c;
+}
+.btn-success:active {
+    background-color: #198754;
+    border-color: #198754;
+}
+.btn-warning {
+    background-color: goldenrod;
+    border-color: goldenrod;
+    color: black;
+}
+.btn-warning:hover {
+    background-color: palegoldenrod;
+    border-color: palegoldenrod;
+    color: black;
+}
+.btn-warning:active {
+    background-color: goldenrod;
+    border-color: goldenrod;
+    color: black;
+}
+.btn-warning:disabled {
+    background-color: transparent;
+    border-color: goldenrod;
+    color: white;
+}
+.btn-danger:hover {
+    background-color: #ff6373;
+    border-color: #ff6373;
+}
+.btn-danger:active {
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
