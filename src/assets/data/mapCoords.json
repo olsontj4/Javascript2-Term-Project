@@ -34,20 +34,94 @@
         "items": ["gladiator-s-finale", "wanderer-s-troupe", "berserker", "instructor", "the-exile", "prayers-for-wisdom", "prayers-to-springtime", "prayers-for-illumination", "prayers-for-destiny"],
         "coords": [3353, 1941]
     },
+    "cryo-hypostasis": {
+        "name": "Cryo Hypostasis",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "lucky-dog", "berserker", "the-exile", "prayers-to-springtime"],
+        "coords": [4370, 1462]
+    },
+    "maguu-kenki": {
+        "name": "Maguu Kenki",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "lucky-dog", "berserker", "instructor"],
+        "coords": [5264, 4020]
+    },
+    "perpetual-mechanical-array": {
+        "name": "Perpetual Mechanical Array",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "lucky-dog", "berserker", "the-exile", "prayers-to-springtime"],
+        "coords": [6328, 3109]
+    },
+    "pyro-hypostasis": {
+        "name": "Pyro Hypostasis",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "adventurer", "berserker", "instructor", "prayers-for-illumination"],
+        "coords": [5685, 3568]
+    },
+    "hydro-hypostasis": {
+        "name": "Hydro Hypostasis",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "adventurer", "berserker", "the-exile", "prayers-for-destiny"],
+        "coords": [4578, 3821]
+    },
+    "thunder-manifestation": {
+        "name": "Thunder Manifestation",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "traveling-doctor", "instructor", "the-exile", "prayers-for-wisdom"],
+        "coords": [6224, 4401]
+    },
+    "golden-wolflord": {
+        "name": "Golden Wolflord",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "traveling-doctor", "instructor", "the-exile"],
+        "coords": [5425, 5376]
+    },
+    "jadeplume-terrorshroom": {
+        "name": "Jadeplume Terrorshroom",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "adventurer", "berserker", "instructor"],
+        "coords": [2156, 2104]
+    },
+    "electro-regisvine": {
+        "name": "Electro Regisvine",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "traveling-doctor", "instructor", "the-exile", "prayers-for-wisdom"],
+        "coords": [3028, 2025]
+    },
+    "aeonblight-drake": {
+        "name": "Aeonblight Drake",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "lucky-dog", "berserker", "the-exile", "prayers-to-springtime"],
+        "coords": [3038, 2715]
+    },
+    "Algorithm of Semi-Intransient Matrix of Overseer Network": {
+        "name": "Algorithm of Semi-Intransient Matrix of Overseer Network",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "adventurer", "berserker", "instructor", "prayers-for-illumination"],
+        "coords": [1457, 3441]
+    },
+    "dendro-hypostasis": {
+        "name": "Dendro Hypostasis",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "adventurer", "berserker", "instructor"],
+        "coords": [2145, 3267]
+    },
+    "setekh-wenut": {
+        "name": "Setekh Wenut",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "lucky-dog", "berserker", "instructor"],
+        "coords": [1810, 2557]
+    },
+    "iniquitous-baptist": {
+        "name": "Iniquitous Baptist",
+        "items": ["gladiator-s-finale", "wanderer-s-troupe", "berserker", "instructor", "the-exile", "prayers-for-wisdom", "prayers-to-springtime", "prayers-for-illumination", "prayers-for-destiny"],
+        "coords": [671, 1776]
+    },
     "cecilia-garden": {
         "name": "Cecilia Garden",
+        "items": ["decarabian", "boreal", "dandelion"],
         "coords": [4212, 917]
     },
     "domain-of-guyun": {
         "name": "Domain of Guyun",
+        "items": ["lucky-dog", "brave-heart", "archaic-petra", "retracing-bolide"],
         "coords": [4579, 2194]
     },
     "hidden-palace-of-lianshan-formula": {
         "name": "Hidden Palace of Lianshan Formula",
+        "items": ["guyun", "elixir", "aerosiderite"],
         "coords": [4303, 1677]
     },
     "hidden-palace-of-lianshan": {
         "name": "Hidden Palace of Lianshan Formula",
+        "items": ["guyun", "elixir", "aerosiderite"],
         "coords": [4303, 1677]
     },
     "midsummer-courtyard": {
@@ -56,6 +130,7 @@
     },
     "court-of-flowing-sand": {
         "name": "Court of Flowing Sand",
+        "items": ["distantant-sea", "narukami", "mask"],
         "coords": [6300, 3250]
     },
     "mondstadt": {

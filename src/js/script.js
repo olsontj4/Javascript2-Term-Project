@@ -249,14 +249,15 @@ class GenshinTool {
         this.uiSelect = document.querySelectorAll("select");
     }
     formSubmit(event) {
-        this.nextIndex = 0;
         event.preventDefault();
+        this.nextIndex = 0;
         //console.log("Success!");
-        if (document.getElementById(`input0`).selectedIndex == 0) {
+        const input0 = document.getElementById("input0");
+        if (input0.selectedIndex == 0) {
             this.uiSubmitMessage.innerHTML = "No item selected."
         }
-        else if (document.getElementById(`input0`).value == "characters" || document.getElementById(`input0`).value == "enemies") {
-            let submitMessage = `${document.getElementById(`input0`).value} are not items, and do not have a location on this map.`
+        else if (["characters", "elements", "enemies"].includes(input0.value)) {
+            let submitMessage = `${input0.value} are not items, and do not have a location on this map.`
             this.uiSubmitMessage.innerHTML = submitMessage;
         }
         else {
@@ -276,8 +277,8 @@ class GenshinTool {
         }
     }
     findNext(event) {
-        this.nextIndex++;
         event.preventDefault();
+        this.nextIndex++;
         //console.log("Success!");
         let coords = this.searchCoords(this.nextIndex);
         if (coords == null) {
@@ -301,16 +302,16 @@ class GenshinTool {
                     }
                 }
             }
-            else if (this.holdData.source != undefined) {
+            else if (this.holdDataBranch.sources != undefined) {
                 for (let nameOf in this.holdJSON) {
-                    if (this.holdData.source == nameOf || this.holdData.source == this.holdJSON[nameOf].name) {
+                    if (this.holdDataBranch.sources[index] == nameOf || this.holdDataBranch.sources[index] == this.holdJSON[nameOf].name) {
                         matches.push(this.holdJSON[nameOf].coords);
                     }
                 }
             }
-            else if (this.holdDataBranch.sources != undefined) {
+            else if (this.holdData.source != undefined) {
                 for (let nameOf in this.holdJSON) {
-                    if (this.holdDataBranch.sources[index] == nameOf || this.holdDataBranch.sources[index] == this.holdJSON[nameOf].name) {
+                    if (this.holdData.source == nameOf || this.holdData.source == this.holdJSON[nameOf].name) {
                         matches.push(this.holdJSON[nameOf].coords);
                     }
                 }
@@ -351,16 +352,16 @@ class GenshinTool {
                     }
                 }
             }
-            else if (this.holdData.source != undefined) {
+            else if (this.holdDataBranch.sources != undefined) {
                 for (let nameOf in this.holdJSON) {
-                    if (this.holdData.source == nameOf || this.holdData.source == this.holdJSON[nameOf].name) {
+                    if (this.holdDataBranch.sources[0] == nameOf || this.holdDataBranch.sources[0] == this.holdJSON[nameOf].name) {
                         return this.holdJSON[nameOf].coords;
                     }
                 }
             }
-            else if (this.holdDataBranch.sources != undefined) {
+            else if (this.holdData.source != undefined) {
                 for (let nameOf in this.holdJSON) {
-                    if (this.holdDataBranch.sources[0] == nameOf || this.holdDataBranch.sources[0] == this.holdJSON[nameOf].name) {
+                    if (this.holdData.source == nameOf || this.holdData.source == this.holdJSON[nameOf].name) {
                         return this.holdJSON[nameOf].coords;
                     }
                 }
